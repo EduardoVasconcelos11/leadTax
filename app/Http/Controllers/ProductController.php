@@ -17,7 +17,6 @@ class ProductController extends Controller
 
   public function scrape()
   {
-    $this->deleteAll();
     $products = $this->scraperService->scrapeProducts($this->scrapeUrl);
     $this->scraperService->saveProducts($products);
 
